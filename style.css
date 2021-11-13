@@ -19,7 +19,7 @@ body{
     background-color: rgba(240,248,255,0.8);
     padding: 20px;
     text-align: center;
-    
+    /* border: 4px solid #c96203; */
 }
 
 .app > *
@@ -69,4 +69,12 @@ body{
 {
     font-size: 14pt;
     font-weight: 600;
+}
+#khapi
+{
+    color: aliceblue;
+    text-align: right;
+    margin-right: 10px;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
 }
