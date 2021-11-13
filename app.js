@@ -41,30 +41,46 @@ function showWeatherReport(weather) {
 
     if (weatherType.textContent == 'Clear') {
         document.body.style.backgroundImage = "url('clear.jpg')";
+        document.getElementById("icon").src = "clear_sky_icon.png";
     } else if (weatherType.textContent == 'Clouds') {
-        document.body.style.backgroundImage = "url('cloud.jpg')";}
-      else if (weatherType.textContent == 'Mist' || weatherType.textContent == 'Smoke') {
-            document.body.style.backgroundImage = "url('mist.jpg')";
+        document.body.style.backgroundImage = "url('cloud.jpg')";
+        document.getElementById("icon").src = "cloud_icon.png";
+    }
+    else if (weatherType.textContent == 'Mist' || weatherType.textContent == 'Smoke') {
+        document.body.style.backgroundImage = "url('mist.jpg')";
+        document.getElementById("icon").src = "mist_icon.png";
     } else if (weatherType.textContent == 'Haze') {
         document.body.style.backgroundImage = "url('haze.jpg')";
+        document.getElementById("icon").src = "haze_icon.png";
     } else if (weatherType.textContent == 'Rain') {
-        document.body.style.backgroundImage = "url('rain.jpg')";
-    } 
+        // document.body.style.backgroundImage = "url('rain.jpg')";
+        // document.getElementById("icon").src = "rain_icon.png";
+        document.body.style.backgroundImage = "url('common.jpg')";
+        document.getElementById("icon").src = "common_icon.png";
+    }
     else if (weatherType.textContent == 'Drizzle') {
-        document.body.style.backgroundImage = "url('drizzle.jpg')";}
+        document.body.style.backgroundImage = "url('drizzle.jpg')";
+        document.getElementById("icon").src = "drizzle_icon.png";
+    }
     else if (weatherType.textContent == 'Snow') {
         document.body.style.backgroundImage = "url('snow.jpg')";
+        document.getElementById("icon").src = "snow_icon.png";
     } else if (weatherType.textContent == 'Thunderstorm') {
         document.body.style.backgroundImage = "url('thunderstorm.jpg')";
+        document.getElementById("icon").src = "thunderstorm_icon.png";
     }
+    else{
+        document.body.style.backgroundImage = "url('common.jpg')";
+        document.getElementById("icon").src = "common_icon.png";
 }
-function manageDate(exact_date)
-{
+
+}
+function manageDate(exact_date) {
     let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday",
-    "Friday", "Saturday"];
+        "Friday", "Saturday"];
 
     let months = ["January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December"];
+        "July", "August", "September", "October", "November", "December"];
 
     let year = exact_date.getFullYear();
     let month = months[exact_date.getMonth()];
